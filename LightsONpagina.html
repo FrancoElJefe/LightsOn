@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Titulo</title>
+
+<style type=text/css>
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #666;
+  padding: 20px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+</style>
+
+<datalist id="listadetimers">
+
+  <option value="1 minutos">
+
+  <option value="2 minutos">
+
+  <option value="3 minutos">
+
+  <option value="4 minutos">
+
+</datalist>
+
+</head>
+
+<body>
+
+<header>
+<h1>Lights On</h1>
+</header>
+
+<section>
+<nav>
+<center><p><font size="7">Estado:</font></p><br><br><p><font size="6">ON/OFF</font></p></center>
+</nav>
+
+<article>
+<center>
+
+<br><br><br><br>
+
+<input id="btnEncender" type="button" value="Encender" style="background: green; width:150px; height:45px ; color: white" onclick="window.location.href='ON.htlm'">
+
+&nbsp;
+
+<input type="button" id="btApagar" value="Apagar" style="background: red; width:150px; height:45px ; color: white" onclick="window.location.href='OFF.htlm'">
+
+<br><br><br>
+
+<input type="text" name="Temporizador" list="listadetimers" style="width: 200px ; height: 45px" >
+<input type="button" id="btnTempo" value="Set Temporizador" style="background: purple; width:150px; height:45px ; color: white" onclick="window.location.href='TIMER.htlm'">
+
+</center>
+</article>
+
+</section>
+
+<footer>|</footer>
+
+</body>
+
+</html>
